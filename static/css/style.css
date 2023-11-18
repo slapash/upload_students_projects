@@ -1,0 +1,77 @@
+
+#drop_area {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.3s;
+    height: 500px;
+  }
+  
+  #drop_area.hover {
+    background-color: #f0f0f0;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+#files-list {
+    list-style: none;
+    padding: 0;
+}
+#files-list li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#files-list li a {
+    text-decoration: none;
+    
+    font-weight: bold;
+}
+#upload-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    #files-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #files-list li a {
+        margin-top: 10px;
+    }
+}
+a{
+    
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 3px;
+    color: #f0f0f0;
+    background-color: rgb(236, 45, 39);
+}
+li{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.Download{
+    background-color: #5cb85c;
+}
+.upload{
+    background-color: dodgerblue;
+}

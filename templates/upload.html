@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="drop_area" data-upload-url="{{ url_for('upload_file') }}" data-index-url="{{ url_for('index') }}">
+        Drag and drop your file here or click to select a file
+    </div>
+    <!-- Include your JavaScript file here -->
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</body>
+</html>
