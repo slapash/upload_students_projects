@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for,send_from_directory
-
+import requests
 from werkzeug.utils import secure_filename
 import os
 
@@ -10,7 +10,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/')
 def index():
     files = os.listdir(app.config['UPLOAD_FOLDER'])
-    return render_template('index.html', files=files)
+    return render_template('index.html', files=files, mdp = request.args.get('mdp'))
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():

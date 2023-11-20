@@ -11,8 +11,10 @@
             <li>
                 {{ file }}
                 <div>
+                    {% if mdp == "HCA" %}
                     <a class="Download" href="/uploads/{{ file }}" target="_blank">Download</a> |
                     <a href="{{ url_for('delete_file', filename=file) }}">Delete</a>
+                    {% endif %}
                 </div>
             </li>
         {% endfor %}
